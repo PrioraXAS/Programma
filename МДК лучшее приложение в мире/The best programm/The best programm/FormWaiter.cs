@@ -32,7 +32,7 @@ namespace The_best_programm
                 sqlReader = (SQLiteDataReader)await command.ExecuteReaderAsync();
                 while (await sqlReader.ReadAsync())
                 {
-                    data.Add(new string[6]); // вывод данных по столбцам
+                    data.Add(new string[6]);
 
                     data[data.Count - 1][0] = Convert.ToString($"{sqlReader[$"{table_Order.ID}"]}");
                     data[data.Count - 1][1] = Convert.ToString($"{sqlReader[$"{table_Order.Price}"]}");

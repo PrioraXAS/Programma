@@ -31,7 +31,7 @@ namespace The_best_programm
                 sqlReader = (SQLiteDataReader)await command.ExecuteReaderAsync();
                 while (await sqlReader.ReadAsync())
                 {
-                    data.Add(new string[6]); // вывод данных по столбцам
+                    data.Add(new string[6]);
 
                     data[data.Count - 1][0] = Convert.ToString($"{sqlReader[$"{table_Order.ID}"]}");
                     data[data.Count - 1][1] = Convert.ToString($"{sqlReader[$"{table_Order.Price}"]}");
@@ -84,7 +84,7 @@ namespace The_best_programm
                 try
                 {
                     SQLiteCommand command = new SQLiteCommand($"DELETE FROM [{table_Order.main}] " +
-                        $"WHERE ID = @ID", DB); // удаляем данные из БД
+                        $"WHERE ID = @ID", DB);
                     _ = command.Parameters.Add(new SQLiteParameter("@ID", dataGridViewCourier.CurrentRow.Cells["ID"].Value));
                     _ = command.ExecuteNonQuery();
                     _ = MessageBox.Show("Удаление заявки прошло успешно", "Удаление", MessageBoxButtons.OK);

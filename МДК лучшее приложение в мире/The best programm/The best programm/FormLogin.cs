@@ -31,13 +31,13 @@ namespace The_best_programm
             {
                 SQLiteCommand command = new SQLiteCommand($"SELECT * FROM [{table_Users.main}] " +
                     $"WHERE {table_Users.Login}=@Login " +
-                    $"AND {table_Users.Password}=@Password", DB); // берет данные для TextBox из таблицы table_Users
+                    $"AND {table_Users.Password}=@Password", DB);
                 _ = command.Parameters.AddWithValue("Login", TextBoxLogin.Text);
                 _ = command.Parameters.AddWithValue("Password", TextBoxPassword.Text);
                 SQLiteDataReader sqlReader = (SQLiteDataReader)await command.ExecuteReaderAsync();
 
                 if (await sqlReader.ReadAsync())
-                {   // вывод данных в личный кабинет
+                {
                     DataUser.family = sqlReader[$"{table_Users.Surname}"].ToString();
                     DataUser.name = sqlReader[$"{table_Users.Name}"].ToString();
                     DataUser.number = sqlReader[$"{table_Users.Number}"].ToString();

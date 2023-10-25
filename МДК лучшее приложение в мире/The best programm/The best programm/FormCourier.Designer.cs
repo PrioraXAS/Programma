@@ -52,7 +52,7 @@
             this.button1.BackColor = System.Drawing.Color.RosyBrown;
             this.button1.Location = new System.Drawing.Point(5, 226);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(170, 41);
+            this.button1.Size = new System.Drawing.Size(156, 41);
             this.button1.TabIndex = 0;
             this.button1.Text = "Принят заказ";
             this.button1.UseVisualStyleBackColor = false;
@@ -63,7 +63,7 @@
             this.button2.BackColor = System.Drawing.Color.RosyBrown;
             this.button2.Location = new System.Drawing.Point(5, 309);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(170, 41);
+            this.button2.Size = new System.Drawing.Size(156, 41);
             this.button2.TabIndex = 1;
             this.button2.Text = "Удалить заказ";
             this.button2.UseVisualStyleBackColor = false;
@@ -111,17 +111,17 @@
             this.ColumnWaiter,
             this.ColumnDishes});
             this.dataGridViewCourier.GridColor = System.Drawing.SystemColors.Control;
-            this.dataGridViewCourier.Location = new System.Drawing.Point(181, 39);
+            this.dataGridViewCourier.Location = new System.Drawing.Point(167, 39);
             this.dataGridViewCourier.Name = "dataGridViewCourier";
             this.dataGridViewCourier.ReadOnly = true;
             this.dataGridViewCourier.RowHeadersVisible = false;
-            this.dataGridViewCourier.Size = new System.Drawing.Size(604, 419);
+            this.dataGridViewCourier.Size = new System.Drawing.Size(613, 419);
             this.dataGridViewCourier.TabIndex = 7;
             // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.RosyBrown;
-            this.button3.Location = new System.Drawing.Point(748, 2);
+            this.button3.Location = new System.Drawing.Point(747, 2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(33, 31);
             this.button3.TabIndex = 10;
@@ -133,7 +133,7 @@
             // 
             this.ButtonUpdate.BackColor = System.Drawing.Color.RosyBrown;
             this.ButtonUpdate.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ButtonUpdate.Location = new System.Drawing.Point(711, 2);
+            this.ButtonUpdate.Location = new System.Drawing.Point(710, 2);
             this.ButtonUpdate.Name = "ButtonUpdate";
             this.ButtonUpdate.Size = new System.Drawing.Size(31, 31);
             this.ButtonUpdate.TabIndex = 47;
@@ -182,7 +182,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(793, 470);
+            this.ClientSize = new System.Drawing.Size(792, 470);
             this.Controls.Add(this.ButtonUpdate);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.dataGridViewCourier);

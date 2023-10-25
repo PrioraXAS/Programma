@@ -25,7 +25,7 @@ namespace The_best_programm
             string surname = TextBoxSurname.Text;
             string name = textBoxName.Text;
             string number = textBoxNumber.Text;
-            string role = "user"; //устанавливаем значение роли по умолчанию
+            string role = "user";
             string query = $"INSERT INTO [{table_Users.main}] (Name, Login, Password, Surname,Number , Role) " +
                     $"VALUES (@Name, @Login, @Password, @Surname, @Number, @Role)";
 
@@ -36,7 +36,7 @@ namespace The_best_programm
                     $"AND {table_Users.Password}=@Password " +
                     $"AND {table_Users.Surname}=@Surname " +
                     $"AND {table_Users.Number}=@Number " +
-                    $"AND {table_Users.Name}=@Name", DB); // берет полученные данные из TextBox в БД(table_Users)
+                    $"AND {table_Users.Name}=@Name", DB);
                 _ = command.Parameters.AddWithValue("@Login", textBoxLogin.Text);
                 _ = command.Parameters.AddWithValue("@Password", textBoxPassword.Text);
                 _ = command.Parameters.AddWithValue("@Name", textBoxName.Text);
@@ -57,7 +57,7 @@ namespace The_best_programm
                         _ = commandInsert.Parameters.AddWithValue("@Password", textBoxPassword.Text);
                         _ = commandInsert.Parameters.AddWithValue("@Surname", TextBoxSurname.Text);
                         _ = commandInsert.Parameters.AddWithValue("@Number", textBoxNumber.Text);
-                        _ = commandInsert.Parameters.AddWithValue("@Role", role); //устанавливаем значение роли по умолчанию
+                        _ = commandInsert.Parameters.AddWithValue("@Role", role);
                         _ = await commandInsert.ExecuteNonQueryAsync();
                     }
                     Form formCreateTicket = new FormLogin();
